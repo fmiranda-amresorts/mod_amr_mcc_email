@@ -40,8 +40,8 @@
 
 	<script>
 		jQuery("body").on( "click", "#sbox-overlay, #sbox-btn-close", function() {
-						jQuery('.form_mail').show();
-						jQuery('.form_mess').hide();
+			jQuery('.form_mail').show();
+			jQuery('.form_mess').hide();
 		});
 
 		function submitOverride(){
@@ -69,7 +69,7 @@
 						$inputs.removeAttr("disabled");
 						jQuery('.form_mail').hide();
 						jQuery('.form_mess').show();
-						jQuery('#sidebar_mail').addClass('active');
+						//jQuery('#sidebar_mail').addClass('active');
 					}
 				});
 		}
