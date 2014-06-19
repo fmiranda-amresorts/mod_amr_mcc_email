@@ -45,33 +45,31 @@
 		});
 
 		function submitOverride(){
-			console.log("here in my function");
+			var $form = jQuery('.mail_sign_up'),
+			$inputs = $form.find("input, select, button, textarea"),
+			serializedData = $form.serialize();
 
-				var $form = jQuery('.mail_sign_up'),
-				$inputs = $form.find("input, select, button, textarea"),
-				serializedData = $form.serialize();
+			$inputs.attr("disabled", "disabled");
 
-				$inputs.attr("disabled", "disabled");
+			jQuery.ajax({
+				url: "http://www.amresorts.us/pms_wsdl/CaptureLeadSimple.php",
+				type: "get",
+				data: serializedData,
+				dataType: 'text',
 
-				jQuery.ajax({
-					url: "http://www.amresorts.us/pms_wsdl/CaptureLeadSimple.php",
-					type: "get",
-					data: serializedData,
-					dataType: 'text',
-
-					success: function(response, textStatus, jqXHR){
-						//alert('!!'+response);
-					},
-					error: function(jqXHR, textStatus, errorThrown){
-						//alert('??'+textStatus+' - '+errorThrown);
-					},
-					complete: function(){
-						$inputs.removeAttr("disabled");
-						jQuery('.form_mail').hide();
-						jQuery('.form_mess').show();
-						//jQuery('#sidebar_mail').addClass('active');
-					}
-				});
+				success: function(response, textStatus, jqXHR){
+					//alert('!!'+response);
+				},
+				error: function(jqXHR, textStatus, errorThrown){
+					//alert('??'+textStatus+' - '+errorThrown);
+				},
+				complete: function(){
+					$inputs.removeAttr("disabled");
+					jQuery('.form_mail').hide();
+					jQuery('.form_mess').show();
+					//jQuery('#sidebar_mail').addClass('active');
+				}
+			});
 		}
 	</script>
 </div>
