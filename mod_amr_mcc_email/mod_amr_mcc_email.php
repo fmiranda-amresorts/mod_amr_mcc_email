@@ -8,7 +8,7 @@
 <div id="sidebar_mail">
 	<div id="header_mail">KEEP IN TOUCH</div>
 	<div id="text_mail">Learn about deals &amp; specials by email.</div>
-	<div id="link_mail"><a href="#gk_lightbox_room_test" rel="boxed"><?php echo $params->get('anchor_text'); ?></a></div>
+	<a href="#gk_lightbox_room_test" rel="boxed" class="button_email_signup"><?php echo $params->get('anchor_text'); ?></a>
 
 	<div style="display: none;">
 		<div id="gk_lightbox_room_test">
@@ -17,19 +17,33 @@
 				<form class='mail_sign_up form-validate' onsubmit='submitOverride(); return false;'>
 					<input name="nextpage" type="hidden" value="<?php echo JURI::current();?>" />
 					<input name="lead_source" type="hidden" value="<?php echo $params->get('lead_source'); ?>" />
+                    <div class="formitem">
 					<label>FIRST NAME:</label>
 					<input name="givenname" type="text" id="givenname" tabindex="1" title="first" value="" size="22" maxlength="100" required="required">
+                    </div>
+                    <div class="formitem">
 					<label>LAST NAME:</label>
 					<input name="familyname" type="text" id="familyname" tabindex="2" title="givenname" value="" size="22" maxlength="100" required="required">
+                    </div>
+                    <div class="formitem">
 					<label>EMAIL:</label>
 					<input name="email" type="text" id="input_mail" class="validate-email" tabindex="3"  title="email" value="" size="22" maxlength="320" required="required">
+                    </div>
+                    <div class="formitem">
 					<label>ZIPCODE:</label>
 					<input name="zip" type="text" id="zipcode" tabindex="4"  class="validate-numeric" title="zipcode" value="" size="10" maxlength="320" required="required">
+                    </div>
+                    <div class="checkbox">
 					<input id='form_data_1' name='form_data_1' type='checkbox' value='Opted In' required='required'>
+                    </div>
+                    <div class="checkbox-text">
 					<p>I agree to receive e-mail communications regarding AMResorts’ branded resorts as well as from affiliates of AMResorts within the Apple Leisure Group companies regarding 
-						their travel and hospitality products and services, including Unlimited Vacation Club, AppleVacations,CheapCaribbean.com, Travel Impressions and Amstar.  Once you have opted-in 
+						their travel and hospitality products and services, including Unlimited Vacation Club, AppleVacations, CheapCaribbean.com, Travel Impressions and Amstar. Once you have opted-in 
 						to receive Email from us, you may choose to opt-out of Email communications at any time by updating your account.  For more information you can view our Privacy Policy.</p>
+                    </div>
+                    <div class="formitem">
 					<input type="image" name="but_img" class="content_button validate" src="images/button_sign_up.png">
+                    </div>
 				</form>
 			</div>
 			<div class="form_mess" style="display:none;">
