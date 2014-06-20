@@ -25,7 +25,7 @@
 					<input name="email" type="text" id="input_mail" class="validate-email" tabindex="3"  title="email" value="" size="22" maxlength="320" required="required">
 					<label>ZIPCODE:</label>
 					<input name="zip" type="text" id="zipcode" tabindex="4"  class="validate-numeric" title="zipcode" value="" size="10" maxlength="320" required="required">
-					<input id='optin' name='optin' type='checkbox' value='Y' required='required'>
+					<input id='form_data_1' name='form_data_1' type='checkbox' value='Opted In' required='required'>
 					<p>I agree to receive e-mail communications regarding AMResorts’ branded resorts as well as from affiliates of AMResorts within the Apple Leisure Group companies regarding 
 						their travel and hospitality products and services, including Unlimited Vacation Club, AppleVacations,CheapCaribbean.com, Travel Impressions and Amstar.  Once you have opted-in 
 						to receive Email from us, you may choose to opt-out of Email communications at any time by updating your account.  For more information you can view our Privacy Policy.</p>
